@@ -1,5 +1,5 @@
 const express = require("express");
-
+// require('dotenv').config({path: 'test.env'});
 const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
@@ -58,5 +58,5 @@ app.post("/", function (req, res) {
 });
 
 app.listen(process.env.PORT || 3000, function () {
-    console.log("Server is online");
+    console.log("Server is online at port : " + process.env.PORT);
 });
